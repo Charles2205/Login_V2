@@ -1,11 +1,11 @@
 import express from "express";
-import { home, signIn, signUp } from "../controllers/authController.js";
+import { renderSignInPage, signIn, signUp, renderSignUpPage } from "../controllers/authController.js";
 
 
 const router = express.Router();
-router.get('/',home);
-router.get("/sign-up",signUp)
-router.get('/sign-in',signIn)
+router.get('/',renderSignInPage);
+router.get("/sign-up",renderSignUpPage)
+router.get('/sign-in',renderSignInPage)
 
 
 router.post('/sign-up',signUp)
