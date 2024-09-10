@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"yarn run server\" \"yarn  run client\"",
-    "server": "yarn run dev --prefix server",
-    "client": "npm run start --prefix client"
+    "server": "cd backend && yarn dev",
+    "client": "cd frontend && yarn dev"
   },
   "keywords": [],
   "author": "",
